@@ -82,7 +82,7 @@
 
 ```bash
 # Initialize the latest stable branch
-$ repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
+$ repo init --depth=1 -u https://github.com/KernelBuilding/PBRP_manifest -b android-12.1
 
 # Sync the latest stable branch
 $ repo sync
@@ -97,8 +97,8 @@ Follow our pb_device.mk sample
 ```bash
 $ cd <source-dir>
 $ . build/envsetup.sh
-$ lunch pb_<device>-eng
-$ mka pbrp
+$ lunch twrp_<device>-eng
+$ make $recoverytypeimage
 ````
 
 ## Become Official Maintainer
